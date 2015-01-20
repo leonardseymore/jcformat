@@ -45,6 +45,8 @@
                     value = arg;
                 break;
                 default:
+                    // TODO: check for formatOption.slice(0, 1) == '.', for decimal length support
+                    //    e.g. %.3f must translate to parseFloat(arg).toFixed(3)
                     if (formatOption.slice(0, 1) == 'f') {
                         value = parseFloat(arg);
                     } else {
